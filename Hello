@@ -1,4 +1,8 @@
 index.md
+---
+layout: default
+title: Início
+---
 Notas de estudo
 
 Este site reúne anotações, tentativas e reflexões de um estudo amador de matemática.
