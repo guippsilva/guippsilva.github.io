@@ -20,12 +20,13 @@ var disqus_config = function () {
 };
 (function() {
   var d = document, s = d.createElement('script');
-  s.src = 'https://guisilva.disqus.com/embed.js';
+  s.src = 'https://guilherme-15.disqus.com/embed.js';
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Por favor, ative o JavaScript para ver os comentários do Disqus.</noscript>
+
 
 
 Este site reúne anotações, tentativas e reflexões de um estudo amador de matemática.
