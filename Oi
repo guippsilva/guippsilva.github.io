@@ -1,0 +1,13 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Estudos Amadores — Fermat</title>
+</head>
+<body>
+  <h1>Estudos Amadores — Fermat</h1>
+  <p>Este site está sendo montado com notas de estudo, tentativas e leituras.</p>
+  <p>Baseado em um projeto pessoal de aprendizado amador e honesto.</p>
+</body>
+</html>
