@@ -3,6 +3,7 @@ layout: default
 title: Início
 ---
 
+**#Inspirado no pir2 e Tao. A felidade/conhecimento ou sei lá oq só é plena quando comparti... Áah esquece!**
 Este site reúne anotações, tentativas e reflexões de um estudo amador de matemática.
 
 Não se trata de material didático nem de pesquisa profissional.
