@@ -9,7 +9,7 @@ Oi, sou Guilherme um curioso feroz e quero aprender uns problemas e me frustrar 
 
 
 <p align="center">
-  <img src="/assets/img/diagrama.png" width="380">
+  <img src="/assets/img/images.jpeg" width="380">
 </p>
 
 
