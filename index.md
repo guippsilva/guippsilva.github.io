@@ -3,6 +3,9 @@ layout: default
 title: Início
 ---
 
+<span style="color:#1e8449">
+Oi, sou Guilherme um curioso feroz e quero aprender uns problemas e me frustrar (?) tentando resolver alguns.
+</span>
 
 Este site reúne anotações, tentativas e reflexões de um estudo amador de matemática.
 
