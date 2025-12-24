@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Teste Disqus</title>
+</head>
+<body>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+  this.page.url = window.location.href;
+  this.page.identifier = "teste";
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://guisilva.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+</body>
+</html>
