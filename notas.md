@@ -7,11 +7,10 @@ title: Notas
 </span>
 
 <span style="color:#386641">
-# Peano
+Peano
 </span>
 
 <span style="color:#6a994e">
-  
 Axiom 2.1. 0 is a natural number.
   
 Axiom 2.2. If n is a natural number, then n ++ is also a natural number.
