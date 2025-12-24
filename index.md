@@ -1,13 +1,7 @@
-index.md
-
 ---
 layout: default
 title: Início
 ---
-
-# Guilherme Silva
-
-Notas de estudo
 
 Este site reúne anotações, tentativas e reflexões de um estudo amador de matemática.
 
@@ -23,13 +17,5 @@ Ele existe como um espaço de estudo lento, honesto e público.
 Se algo aqui for útil, ótimo.
 Se não, o processo já terá valido a pena.
 
-/notas
-tentando-entender-XXXX.md
 
-Problemas: Não resolva tudo. Não conclua artificialmente.
-
-/tentativas
-Aqui
-
-/leituras
 
