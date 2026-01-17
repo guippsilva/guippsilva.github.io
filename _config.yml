@@ -1,3 +1,18 @@
 theme: minima
 title: Guilherme Silva
-description: Aprendendo de forma independente, amadora e amigável.
+description: Explorando matemática de forma independente - do abstrato ao aplicado.
+
+# Navegação do menu
+header_pages:
+  - pura.md
+  - aplicada.md
+  - reflexoes.md
+
+# Informações adicionais
+author: Guilherme Silva
+email: seu-email@exemplo.com  # opcional
+
+# Plugins (opcional)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
