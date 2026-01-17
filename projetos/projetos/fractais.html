@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Fractais e Caos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .status {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            color: #155724;
+        }
+        
+        .canvas-container {
+            background: #000;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        
+        .controles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .controle {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .controle label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #495057;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .info {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌀 Explorador de Fractais & Caos</h1>
+            <p style="font-size: 1.2em; color: #6c757d;">Beleza Matemática em Padrões Infinitos</p>
+        </header>
+        
+        <div class="status">
+            <h3>✅ Projeto Parcialmente Implementado</h3>
+            <p>Versão básica do fractal de Mandelbrot funcionando! Mais fractais e interatividade virão em breve.</p>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+        
+        <div class="controles">
+            <div class="controle">
+                <label>Iterações Máximas</label>
+                <input type="range" id="iteracoes" min="20" max="200" value="50" style="width: 100%">
+                <div style="text-align: center; margin-top: 5px; font-weight: bold;" id="iter-val">50</div>
+            </div>
+            
+            <div class="controle" style="grid-column: span 2;">
+                <button onclick="desenharMandelbrot()">🔄 Redesenhar</button>
+            </div>
+        </div>
+        
+        <div class="info">
+            <h3 style="color: #2196F3; margin-bottom: 15px;">📐 Sobre o Conjunto de Mandelbrot</h3>
+            <p style="margin-bottom: 10px;">
+                O conjunto de Mandelbrot é definido pela iteração: <strong>z<sub>n+1</sub> = z<sub>n</sub>² + c</strong>
+            </p>
+            <p style="margin-bottom: 10px;">
+                Para cada ponto c no plano complexo, iteramos começando com z₀ = 0. Se a sequência permanece limitada, 
+                c pertence ao conjunto (colorido de preto). Caso contrário, colorimos baseado em quantas iterações 
+                foram necessárias para divergir.
+            </p>
+            <p style="color: #6c757d; font-style: italic;">
+                💡 Dica: Aumente as iterações para ver mais detalhes nas bordas do fractal!
+            </p>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #fff3cd; border-radius: 10px; border-left: 4px solid #ffc107;">
+            <h3 style="color: #856404; margin-bottom: 10px;">🚧 Próximas Funcionalidades</h3>
+            <ul style="margin-left: 20px; color: #856404;">
+                <li>Zoom interativo com mouse</li>
+                <li>Conjunto de Julia</li>
+                <li>Atratores estranhos (Lorenz, etc)</li>
+                <li>Esquemas de cores personalizáveis</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const width = canvas.width;
+        const height = canvas.height;
+        
+        document.getElementById('iteracoes').addEventListener('input', (e) => {
+            document.getElementById('iter-val').textContent = e.target.value;
+        });
+        
+        function mandelbrot(cx, cy, maxIter) {
+            let x = 0, y = 0;
+            let iter = 0;
+            
+            while (x*x + y*y <= 4 && iter < maxIter) {
+                let xtemp = x*x - y*y + cx;
+                y = 2*x*y + cy;
+                x = xtemp;
+                iter++;
+            }
+            
+            return iter;
+        }
+        
+        function desenharMandelbrot() {
+            const maxIter = parseInt(document.getElementById('iteracoes').value);
+            const imageData = ctx.createImageData(width, height);
+            
+            // Limites do plano complexo
+            const xMin = -2.5, xMax = 1;
+            const yMin = -1.25, yMax = 1.25;
+            
+            for (let py = 0; py < height; py++) {
+                for (let px = 0; px < width; px++) {
+                    // Mapear pixel para coordenada complexa
+                    const cx = xMin + (px / width) * (xMax - xMin);
+                    const cy = yMin + (py / height) * (yMax - yMin);
+                    
+                    const iter = mandelbrot(cx, cy, maxIter);
+                    
+                    const index = (py * width + px) * 4;
+                    
+                    if (iter === maxIter) {
+                        // Dentro do conjunto - preto
+                        imageData.data[index] = 0;
+                        imageData.data[index + 1] = 0;
+                        imageData.data[index + 2] = 0;
+                    } else {
+                        // Fora do conjunto - colorir baseado nas iterações
+                        const ratio = iter / maxIter;
+                        imageData.data[index] = Math.floor(255 * ratio);
+                        imageData.data[index + 1] = Math.floor(255 * Math.sqrt(ratio));
+                        imageData.data[index + 2] = Math.floor(255 * (1 - ratio));
+                    }
+                    imageData.data[index + 3] = 255; // Alpha
+                }
+            }
+            
+            ctx.putImageData(imageData, 0, 0);
+        }
+        
+        // Desenhar ao carregar
+        window.addEventListener('load', desenharMandelbrot);
+    </script>
+</body>
+</html>
