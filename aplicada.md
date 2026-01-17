@@ -9,23 +9,42 @@ Onde a teoria encontra o mundo: projetos práticos, modelagem e implementações
 
 ---
 
-## 🎯 Projetos em Andamento
+## 🎯 Projetos Implementados
 
-### 🦌 Modelo Predador-Presa (Planejado)
-Simulação interativa de dinâmica populacional usando modelos de Holling.
+### [🦌 Simulador de Dinâmica Populacional](/projetos/dinamica-populacional.html)
+**Status:** ✅ Completo e funcional
 
-**Status:** Planejando  
-**Tecnologias:** Python/JavaScript  
-**Objetivo:** Visualizar como diferentes respostas funcionais afetam a estabilidade do sistema
+Simulação interativa do modelo logístico de crescimento populacional. Explore como diferentes parâmetros (taxa de crescimento, capacidade de suporte) afetam a dinâmica da população ao longo do tempo.
+
+**Tecnologias:** HTML, JavaScript, Chart.js  
+**Conceitos:** Equações diferenciais, sistemas dinâmicos, modelagem populacional
+
+[▶ Abrir Simulador](/projetos/dinamica-populacional.html)
 
 ---
 
-### 📊 Algoritmos de Álgebra Linear (Planejado)
-Implementação do zero de algoritmos numéricos fundamentais.
+### [📊 Visualizador de Álgebra Linear](/projetos/algebra-linear.html)
+**Status:** 🚧 Em desenvolvimento
 
-**Status:** Estudando teoria  
-**Inclui:** SVD, QR decomposition, métodos iterativos  
-**Objetivo:** Entender profundamente como esses algoritmos funcionam
+Implementação e visualização de algoritmos numéricos fundamentais. O objetivo é criar visualizações que mostrem geometricamente o que esses algoritmos fazem.
+
+**Planejado:** SVD, QR decomposition, Método das Potências, Eliminação Gaussiana  
+**Tecnologias:** HTML5 Canvas, JavaScript
+
+[▶ Ver Projeto](/projetos/algebra-linear.html)
+
+---
+
+### [🌀 Explorador de Fractais & Caos](/projetos/fractais.html)
+**Status:** ⚡ Parcialmente implementado
+
+Visualização de fractais e sistemas caóticos. Atualmente com o conjunto de Mandelbrot funcional, com mais fractais planejados.
+
+**Implementado:** Conjunto de Mandelbrot  
+**Planejado:** Conjunto de Julia, Atratores de Lorenz, zoom interativo  
+**Tecnologias:** HTML5 Canvas, JavaScript
+
+[▶ Explorar Fractais](/projetos/fractais.html)
 
 ---
 
@@ -35,16 +54,27 @@ Implementação do zero de algoritmos numéricos fundamentais.
 - **Modelagem Populacional** - Dinâmica de sistemas ecológicos
 - **Sistemas Dinâmicos** - Atratores, caos e estabilidade
 - **Otimização** - Métodos numéricos e aplicações
+- **Geometria Computacional** - Visualizações e algoritmos
 
 ---
 
-## 💡 Próximas Ideias
+## 💡 Ideias Futuras
 
-Estou explorando diferentes direções. Algumas ideias que me interessam:
+Algumas direções que quero explorar:
 
-- Análise de dados reais com modelagem matemática
-- Visualizações interativas de conceitos matemáticos
+- Análise de dados reais com modelagem matemática (dados climáticos, populacionais)
 - Implementações educacionais de algoritmos clássicos
+- Modelos predador-presa mais complexos (Holling Type II/III)
+- Sistemas de reação-difusão (padrões de Turing)
+
+---
+
+## 📝 Processo de Aprendizado
+
+Estes projetos são parte da minha jornada de aprendizado. Não são perfeitos, mas representam 
+tentativas honestas de entender profundamente os conceitos através da implementação.
+
+Erros e refatorações fazem parte do processo. A versão atual é sempre uma iteração do que aprendi até agora.
 
 ---
 
