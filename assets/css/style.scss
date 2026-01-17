@@ -1,0 +1,55 @@
+---
+---
+
+@import "minima";
+
+// Cores personalizadas
+$verde-escuro: #386641;
+$verde-medio: #6a994e;
+$verde-claro: #a7c957;
+
+// Estilização de títulos
+h1 {
+  color: $verde-escuro;
+  border-bottom: 3px solid $verde-medio;
+  padding-bottom: 10px;
+}
+
+h2 {
+  color: $verde-medio;
+  margin-top: 30px;
+}
+
+h3 {
+  color: $verde-escuro;
+}
+
+// Links
+a {
+  color: $verde-medio;
+  
+  &:hover {
+    color: $verde-escuro;
+  }
+}
+
+// Caixas de destaque
+.destaque {
+  background-color: #f0f7f4;
+  border-left: 4px solid $verde-medio;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+// Código
+code {
+  background-color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  border-left: 4px solid $verde-medio;
+}
