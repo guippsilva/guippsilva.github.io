@@ -10,7 +10,7 @@ Oi, sou **Guilherme**, um curioso feroz explorando matemática de forma independ
 Este site documenta minha jornada: das tentativas frustrantes aos pequenos avanços, da teoria pura às aplicações práticas.
 
 <p align="center">
-  <img src="/assets/img/greenvalley.jpeg" width="800">
+  <img src="/assets/img/oceano-noturno.svg" width="600">
 </p>
 
 ---
