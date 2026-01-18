@@ -1,6 +1,6 @@
 theme: minima
 title: Guilherme Silva
-description: Explorando matemática de forma independente - do abstrato ao aplicado.
+description: Explorando matemática - abstrata e aplicada.
 
 # Navegação do menu
 header_pages:
@@ -10,7 +10,7 @@ header_pages:
 
 # Informações adicionais
 author: Guilherme Silva
-email: seu-email@exemplo.com  # opcional
+email: guilsilva2005@gmail.com  # opcional
 
 # Plugins (opcional)
 plugins:
