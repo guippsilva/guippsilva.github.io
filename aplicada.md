@@ -79,3 +79,6 @@ Erros e refatorações fazem parte do processo. A versão atual é sempre uma it
 ---
 
 [← Voltar para o início](/)
+---
+
+{% include comments.html %}
