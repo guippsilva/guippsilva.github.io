@@ -16,4 +16,5 @@ email: guilsilva2005@gmail.com  # opcional
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  # Forçar rebuild
 
