@@ -10,11 +10,14 @@ header_pages:
 
 # Informações adicionais
 author: Guilherme Silva
-email: guilsilva2005@gmail.com  # opcional
+email: guilsilva2005@gmail.com
 
-# Plugins (opcional)
+# Configuração SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  # Forçar rebuild
-
