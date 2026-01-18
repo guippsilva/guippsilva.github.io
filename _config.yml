@@ -16,3 +16,4 @@ email: seu-email@exemplo.com  # opcional
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
