@@ -50,17 +50,4 @@ Se algo aqui for útil, ótimo. Se não, o processo já terá valido a pena.
 
 ---
 
-<div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-  this.page.url = window.location.href;
-  this.page.identifier = "index";
-};
-(function() {
-  var d = document, s = d.createElement('script');
-  s.src = 'https://guilherme-15.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Por favor, ative o JavaScript para ver os comentários do Disqus.</noscript>
+
