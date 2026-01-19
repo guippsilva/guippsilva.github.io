@@ -50,6 +50,4 @@ Se algo aqui for útil, ótimo. Se não, o processo já terá valido a pena.
 
 ---
 
----
-
 {% include comments.html %}
